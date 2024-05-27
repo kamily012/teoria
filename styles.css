@@ -1,0 +1,106 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Alinha o contêiner no centro da tela */
+    height: 100%;
+    background: url('img/fundodois.png') no-repeat center center fixed; /* Adiciona a imagem de fundo */
+    background-size: cover; /* Cobre toda a tela com a imagem */
+}
+
+.brand {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Red Hat Display', sans-serif;
+    color: #fff;
+    font-size: 2em;
+}
+
+.login-box {
+    background-color: #fff; /* Fundo branco */
+    border-radius: 10px; /* Arredondamento das bordas */
+    padding: 40px;
+    width: 400px; /* Largura do contêiner */
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+}
+
+.login-box h1 {
+    color: #b14eff;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #666; /* Cinza escuro */
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%; /* Largura total do contêiner */
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Arredondamento das bordas */
+    background-color: #fff;
+}
+
+.input-group i {
+    margin-right: 10px;
+    color: #888;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.login-box button {
+    background-color: #b14eff;
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Arredondamento das bordas */
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Espaçamento acima do botão */
+}
+
+.login-box button:hover {
+    background-color: #9c3ede;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 20px; /* Espaçamento acima do link */
+    color: #b14eff;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.register-prompt {
+    margin-top: 20px; /* Espaçamento acima do texto */
+    color: #666; /* Cinza escuro */
+}
+
+.register-link {
+    color: #b14eff;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}

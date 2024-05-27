@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub - Carrinho de Compras</title>
+    <link rel="stylesheet" href="compras.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>EventHub</h1>
+        <nav>
+            <a href="#">Carrinho</a>
+            <a href="#">Continuar Compra</a>
+            <a href="#">Pagar</a>
+            <a href="#">Pedido Completo</a>
+        </nav>
+        <div class="checkout-secure">
+            <i class="fas fa-lock"></i> CHECKOUT SEGURO
+        </div>
+    </header>
+    <main>
+        <section class="cart">
+            <div class="cart-header">
+                <label><input type="checkbox" checked> TODOS OS ITENS (1)</label>
+                
+            </div>
+            <div class="international">
+                <label><input type="checkbox" checked> Nacional</label>
+                
+    
+            </div>
+            <div class="cart-item">
+                <label><input type="checkbox" checked> EventHub</label>
+                <div class="item-details">
+                    <img src="img/buffet/table.jpg"Item Image">
+                    <div>
+                        <h2> Sabor do Brasil- Cardapio sugestão</h2>
+                       
+                        <p>⭐ 1.6k+ Reservas</p>
+                    </div>
+                </div>
+                <div class="item-price">
+                
+                    <span class="price">R$500,00</span>
+                    
+                </div>
+                <div class="item-quantity">
+                    <label for="quantity">Quantidade:</label>
+                    <select id="quantity" name="quantity">
+                        <option value="1">1</option>
+                    </select>
+                    <button class="wishlist"><i class="fas fa-heart"></i></button>
+                    <button class="delete"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+        </section>
+        <aside class="order-summary">
+            <h2>Resumo Do Pedido</h2>
+            <div class="summary-details">
+                <span>500,00 $</R15001></span>
+                
+                <span>buffet sugestão</span>
+            </div>
+            <button class="checkout">Compre agora (1)</button>
+            <div class="payment-methods">
+                <h3>Pagamento</h3>
+                <img src="img/pagamento.jpg" alt="Métodos de Pagamento">
+            </div>
+        </aside>
+    </main>
+</body>
+</html>

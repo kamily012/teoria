@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="brand">
+            <h1>EVENTHUB</h1>
+        </div>
+        <div class="login-box">
+            <h1>Bem-vindo!</h1>
+            <p class="subtitle">Acesse sua conta agora mesmo</p>
+            <form onsubmit="return handleLogin()">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="E-mail" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Senha" required>
+                </div>
+                <button type="submit" onclick="redirectToSuggestions()">Entrar</button>
+            </form>
+            <a href="#" class="register-link" onclick="redirectToRegistration()">Registrar</a>
+            <a href="#" class="forgot-password">Esqueci minha senha.</a>
+        </div>
+    </div>
+    <script>
+        function handleLogin() {
+            // Adicione aqui a lógica de validação do login, se tiver
+            return false; // Evita o envio do formulário para fins de exemplo
+        }
+
+        function redirectToRegistration() {
+            window.location.href = "registro.html";
+        }
+
+        function redirectToSuggestions() {
+            window.location.href = "sugestoes.html";
+        }
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - EVENTHUB</title>
+    <link rel="stylesheet" href="register-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="brand">
+            <h1>EVENTHUB</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="register-box">
+            <h2>Criar sua conta</h2>
+            <div class="steps">
+                <div class="step active" id="step-1">1</div>
+                <div class="step" id="step-2">2</div>
+                <div class="step" id="step-3">3</div>
+            </div>
+            <!-- Primeira Parte do Cadastro -->
+            <div class="tab active" id="part-1">
+                <form>
+                    <label for="dob">Data de nascimento</label>
+                    <div class="input-group">
+                        <input type="text" id="dob-day" placeholder="DD">
+                        <input type="text" id="dob-month" placeholder="MM">
+                        <input type="text" id="dob-year" placeholder="YYYY">
+                    </div>
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" placeholder="CPF">
+                    <button type="button" class="btn-continue" onclick="nextStep(2)">Continuar</button>
+                </form>
+            </div>
+            <!-- Segunda Parte do Cadastro -->
+            <div class="tab" id="part-2">
+                <form>
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" name="name" placeholder="Nome completo" required>
+
+                    <label for="address">Endereço</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <label for="city">Cidade</label>
+                    <input type="text" id="city" name="city" required>
+
+                    <label for="zip">Cep</label>
+                    <input type="text" id="zip" name="zip" required>
+
+                    <label for="country">País de residência</label>
+                    <select id="country" name="country" required>
+                        <option value="Brazil" selected>Brazil</option>
+                        <!-- Adicione outros países conforme necessário -->
+                    </select>
+
+                    <label for="phone">Número de telefone</label>
+                    <div class="phone-input">
+                        <select id="phone-code" name="phone-code" required>
+                            <option value="+55" selected>+55</option>
+                            <!-- Adicione outros códigos de país conforme necessário -->
+                        </select>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <button type="button" class="btn-continue" onclick="prevStep(1)">Voltar</button>
+                    <button type="button" class="btn-continue" onclick="nextStep(3)">Continuar</button>
+                </form>
+            </div>
+            <!-- Terceira Parte do Cadastro -->
+            <div class="tab" id="part-3">
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+
+                    <label for="username">Nome de Usuário</label>
+                    <input type="text" id="username" name="username" placeholder="Nome de Usuário" required>
+
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Senha" required>
+
+                    <button type="button" class="btn-continue" onclick="prevStep(2)">Voltar</button>
+                    <button type="submit" class="btn-continue">Concluir Cadastro</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div> <!-- Apenas a imagem de fundo sem conteúdo -->
+
+    <script>
+        function nextStep(step) {
+            const currentStep = step - 1;
+            document.getElementById('part-' + currentStep).style.display = 'none';
+            document.getElementById('part-' + step).style.display = 'block';
+            document.getElementById('step-' + currentStep).classList.remove('active');
+            document.getElementById('step-' + step).classList.add('active');
+        }
+
+        function prevStep(step) {
+            const currentStep = step + 1;
+            document.getElementById('part-' + currentStep).style.display = 'none';
+            document.getElementById('part-' + step).style.display = 'block';
+            document.getElementById('step-' + currentStep).classList.remove('active');
+            document.getElementById('step-' + step).classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
